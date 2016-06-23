@@ -1,4 +1,4 @@
-#!/usr/env/bin python
+#!/usr/bin/env python
 from collections import defaultdict as ddict
 from collections import namedtuple as ntuple
 import collections as coll
@@ -101,10 +101,10 @@ timeLookup = []
 def process_log():
 	# fn = raw_input('input filename : ')
 	# fn = 'access.log'
-	fn = sys.argv[1]
 	if(len(sys.argv) < 2):
 		print('No log file given, exit!')
 		exit(0)
+	fn = sys.argv[1]
 	try:
 		token = 1
 		with open(fn,'r') as f:
